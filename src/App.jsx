@@ -6,7 +6,13 @@ function App() {
 let [counter, setCounter] = useState(0)
 
 
-  const addValue = () => { setCounter(counter + 1) }
+  const addValue = () => {
+    setCounter(prevCounter => prevCounter +1)
+    setCounter(prevCounter => prevCounter +1)
+    setCounter(prevCounter => prevCounter +1)
+    setCounter(prevCounter => prevCounter +1)
+
+  }
   const removeValue = () => { setCounter(counter - 1) }
   const reset = () => {setCounter(0)}
 
