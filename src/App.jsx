@@ -3,20 +3,22 @@ import { useState } from 'react'
 function App() {
 
 
-let [counter, setCounter] = useState(15)
+let [counter, setCounter] = useState(0)
 
 
   const addValue = () => { setCounter(counter + 1) }
   const removeValue = () => { setCounter(counter - 1) }
+  const reset = () => {setCounter(0)}
 
 
   return (
     <>
-      <h1>Counter:{counter}</h1>
-      <button onClick={addValue}>Add value{counter}</button>
+      <h1>Initial value : 0 | {counter}</h1>
+      <button onClick={addValue}>Add value</button>
       <br />
-      <button onClick={removeValue}>Remove value{counter}</button>
-      <p>Footer {counter}</p>
+      <button onClick={removeValue}>Remove value</button>
+      <br />
+      <button onClick={reset}>Reset value</button>
     </>
 
   )
